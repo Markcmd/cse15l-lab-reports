@@ -119,6 +119,7 @@ Question: So, is the reason why this feature of ls is made to check if a certain
   }
   }[user@sahara ~/lecture1]$
   ```
+  
 1. The working directory: `/home/lecture1`
 2. Output explanation: The cat command outputs the contents in the file.
 3. Is output error? why? : No, the command executed successfully.
