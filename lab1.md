@@ -122,10 +122,11 @@ Question: So, is the reason why this feature of ls is made to check if a certain
 1. The working directory: `/home/lecture1`
 2. Output explanation: The cat command outputs the contents in the file.
 3. Is output error? why? : No, the command executed successfully.
-  ```
-    [user@sahara ~/lecture1/messages]$ cat en-us.txt
-    Hello World!
-    [user@sahara ~/lecture1/messages]$
-  ```
-Try different types of files. It still works.
+
+    ```
+      [user@sahara ~/lecture1/messages]$ cat en-us.txt
+      Hello World!
+      [user@sahara ~/lecture1/messages]$
+    ```
+    Tried different types of files. It still works.
 
