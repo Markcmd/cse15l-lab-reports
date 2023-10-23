@@ -8,33 +8,26 @@
   [user@sahara ~]$ cd
   [user@sahara ~]$
   ```
-
-1. The working directory:  `/home`
-2. Output explanation: because there is no argument for the cd command, no change in the directory.
-3. Meaning to have no argument: First, Note that the above statement for "Output explanation:" is incomplete. No argument means going back to the   user's home directory. (Find the feature of cd while answering the question.)
-    ```
-    [user@sahara ~]$ cd lecture1
-    >[user@sahara ~/lecture1]$ cd
-    >[user@sahara ~]$ 
-    ```
-4. Is output error? why? : No, Because it meant to back to the home directory, so it looks like there is no change. And no output
+The working directory is `/home`.
+Output means from home directory change to home directory. 
+The output is not error, No argument means the user is returned to the home directory.
   
 + ```
   [user@sahara ~]$ cd lecture1
   [user@sahara ~/lecture1]$
   ```
-1. The working directory: `/home`
-2. Output explanation: The working directory changed from `/home` to `/home/lecture1`
-3. Is output error? why? : No, the directory changed to `/home/lecture1` which is what I want it to do. And the syntax is correct. And there is no output.
+The working directory is `/home`
+The output means working directory changed from `/home` to `/home/lecture1`. cd command with directory as argument meant to move working directory to the new directory whose name is the same as argument.
+And output is not error, becasue it cd command meant to change directroy to the new directory named by argument.
 
 + ```
   [user@sahara ~/lecture1]$ cd Hello.java
   bash: cd: Hello.java: Not a directory
   [user@sahara ~/lecture1]$ 
   ```
-1. The working directory: `/home/lecture1`
-2. Output explanation: The cd command expects a valid directory as an argument or no argument, but Hello.java is a file, therefore error warning comes out.
-3. Is output error? why? : Yes, as mentioned in 2. above, it outputs a `bash:` error says Hello.java is not a valid directory.
+The working directory is `/home/lecture1`
+The cd command expects a valid directory as an argument or no argument, but Hello.java is a file, therefore error warning comes out.
+The output is an error, as mentioned above, it outputs a `bash:` error says Hello.java is not a valid directory. cd command expect no argument or a directory name that exist in the current working directory as argument.
 
 ### ls-Test
 ![cd-Test](ls-Test.png)
@@ -44,20 +37,19 @@
   lecture1
   [user@sahara ~]$   
   ```
-1. The working directory: `/home`
-2. Output explanation: The output means there is directory lecture1 in the current directory which is `/home`.
-3. Meaning to have no argument: It means it will list all directories and files in the current directory.
-4. Is output error? why? : No, because there can be no argument or directory as an argument in ls command.
+The working directory is `/home`.
+The output means there is directory lecture1 in the current directory working diretory `/home`.
+The ls without argument list all directories and files in the current working directory.
+The output is not error, the command ls expects to have no argument or a directory as an argument that exist in the current working directory.
 
 + ```
   [user@sahara ~]$ ls lecture1
   Hello.class  Hello.java  lecture1  messages  README
   [user@sahara ~]$
   ```
-1. The working directory:  `/home`
-2. Output explanation: The output listed every directory and file in the directory `/home/lecture1`
-3. Is output error? why? : No, the argument lecture1 exists in the current working directory as a directory, and it is a valid directory.
-
+The working directory is `/home`.
+The output listed every directory and file in the directory `/home/lecture1`
+The output is not error, the command ls expects to have no argument or a directory as an argument that exist in the current working directory.
 + ```
   [user@sahara ~]$ ls Hello.java
   ls: cannot access 'Hello.java': No such file or directory
@@ -65,16 +57,19 @@
   [user@sahara ~]$ cd lecture1
   [user@sahara ~/lecture1]$
   ```
-  I made a mistake here, there is no file in the current working directory, so it gave me an error. And then I moved to the new directory `/home/lecture1`.
+(Above code is not a test. it is a mistake I made during my lab. )
+The file hello.java is not in the working directory when enter the "ls Hello.java" command, so it gave me an error.
+And then I moved to the new directory `/home/lecture1`.
 + ```
   [user@sahara ~/lecture1]$ ls Hello.java
   Hello.java
   [user@sahara ~/lecture1]$
   ```
-1. The working directory: `/home/lecture1`
-2. Output explanation: It outputs the file name, which means the file is in the current directory.
-3. Is output error? why? : No, the reason is the same as above 2.. And the syntax is correct. 
-Question: So, is the reason why this feature of ls is made to check if a certain file is in the current directory?
+The working directory  `/home/lecture1`
+The output is file name that I entered, this means the file is in the current directory.
+The output is not an error, the reason is command ls is disigned to have no argument and to have an argument with a directory or a file. 
+Question: So, is the reason why this feature of ls is made to check if a certain file is in the current directory? 
+Yes, if the pathname is a file, ls displays information about the file according to the requested options.
 
 ### cat-Test
 ![cd-Test](cat-Test.png)
@@ -90,19 +85,19 @@ Question: So, is the reason why this feature of ls is made to check if a certain
   [2]+  Stopped                 cat
   [user@sahara ~]$ 
   ```
-1. The working directory:  `/home`
-2. Output explanation: Initially, there was no output. After I entered the first "lecture1" it outputs just what I entered which is "lecture1". Until I pressed the "ctrl + z" it stopped.
-3. Meaning to have no argument: It seems like It allows me to enter something after the cat command without an argument, and it will do nothing but output what I entered.
-4. Is output error? why? : No, because an error warning did not appear.
+The working directory is  `/home`
+Initially, there was no output. After I entered the first "lecture1" it outputs just what I entered which is "lecture1". Until I pressed the "ctrl + z" it stopped.
+The command with no argument means the cat command will read data from its standard input and write them to its standard ouput. Stanard input refers to default input decvice that the program uses to read data.
+The output is not an error, becasue cat is designed to have no argument, but it is useless.
 
 + ```
   [user@sahara ~]$ cat lecture1
   cat: lecture1: Is a directory
   [user@sahara ~]$
   ```
-1. The working directory:  `/home`
-2. Output explanation: Directory cannot be the argument of the cat command. Because the error came out.
-3. Is output error? why? : Yes, a directory cannot be the argument of the cat command.
+The working directory is  `/home`
+The output shows an error, means a directory cannot be the argument of the cat command, And the command cat can have no argument or a file as argument.
+The output is an error, because the command cat is designed to have file as an argument or with no argument, with directroy as an argument, it will output an error.
 
 + ```
   [user@sahara ~]$ cd lecture1
@@ -119,7 +114,6 @@ Question: So, is the reason why this feature of ls is made to check if a certain
   }
   }[user@sahara ~/lecture1]$
   ```
-
-1. The working directory:  `/home/lecture1`
-2. Output explanation: The cat command outputs the contents in the file.
-3. Is output error? why? : No, the command executed successfully.
+The working directory is `/home/lecture1`
+The cat command outputs the contents in the file.
+No, the command executed successfully. because the command meant to have file as argument or with no argument.
