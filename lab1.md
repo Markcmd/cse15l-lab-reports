@@ -73,7 +73,7 @@ Yes, if the pathname is a file, ls displays information about the file according
 
 ### cat-Test
 ![cd-Test](cat-Test.png)
-![cd-Test](cat-Test.png)
+![cd-Test](cat-Test2.png)
 
 + ```
   [user@sahara ~]$ cat
